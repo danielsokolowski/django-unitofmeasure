@@ -1,0 +1,1222 @@
+building conversionTest.txt
+## **** conversion Test  ****
+from conversion import *"""
+Distance conversion class
+>>> from conversion import Distance
+>>> d = Distance(0.0)
+>>> d.m = 1.0
+>>> print d
+1 meters (m)
+0.000621371 miles (mi)
+1.09361 yard (yd)
+3.28084 feet (ft)
+39.3701 inch (inch)
+0.001 kilometers (km)
+100 centimeters (cm)
+1000 millimeters (mm)
+1e+09 nanometer (nm)
+>>> d
+Decimal('1') meters (m)
+Decimal('0.0006213711922373339015151515152') miles (mi)
+Decimal('1.093613298337707666666666667') yard (yd)
+Decimal('3.2808398950131230000') feet (ft)
+Decimal('39.37007874015747600000') inch (inch)
+Decimal('0.0010') kilometers (km)
+Decimal('1.0E+2') centimeters (cm)
+Decimal('1.0E+3') millimeters (mm)
+Decimal('1.0E+9') nanometer (nm)
+>>> d.mi = 1.0
+>>> print d
+1609.34 meters (m)
+1 miles (mi)
+1760 yard (yd)
+5280 feet (ft)
+63360 inch (inch)
+1.60934 kilometers (km)
+160934 centimeters (cm)
+1.60934e+06 millimeters (mm)
+1.60934e+12 nanometer (nm)
+>>> d
+Decimal('1609.344000000000176384102400') meters (m)
+Decimal('1.000000000000000000000000000') miles (mi)
+Decimal('1760.000000000000000000000001') yard (yd)
+Decimal('5280.000000000000000000000000') feet (ft)
+Decimal('63360.00000000000000000000000') inch (inch)
+Decimal('1.609344000000000176384102400') kilometers (km)
+Decimal('160934.4000000000176384102400') centimeters (cm)
+Decimal('1609344.000000000176384102400') millimeters (mm)
+Decimal('1609344000000.000176384102400') nanometer (nm)
+>>> d.yd = 1.0
+>>> print d
+0.9144 meters (m)
+0.000568182 miles (mi)
+1 yard (yd)
+3 feet (ft)
+36 inch (inch)
+0.0009144 kilometers (km)
+91.44 centimeters (cm)
+914.4 millimeters (mm)
+9.144e+08 nanometer (nm)
+>>> d
+Decimal('0.9144000000000001002182399997') meters (m)
+Decimal('0.0005681818181818181818181818180') miles (mi)
+Decimal('1.000000000000000000000000000') yard (yd)
+Decimal('2.999999999999999999999999999') feet (ft)
+Decimal('35.99999999999999999999999999') inch (inch)
+Decimal('0.0009144000000000001002182399997') kilometers (km)
+Decimal('91.44000000000001002182399997') centimeters (cm)
+Decimal('914.4000000000001002182399997') millimeters (mm)
+Decimal('914400000.0000001002182399997') nanometer (nm)
+>>> d.ft = 1.0
+>>> print d
+0.3048 meters (m)
+0.000189394 miles (mi)
+0.333333 yard (yd)
+1 feet (ft)
+12 inch (inch)
+0.0003048 kilometers (km)
+30.48 centimeters (cm)
+304.8 millimeters (mm)
+3.048e+08 nanometer (nm)
+>>> d
+Decimal('0.3048000000000000334060800000') meters (m)
+Decimal('0.0001893939393939393939393939394') miles (mi)
+Decimal('0.3333333333333333333333333334') yard (yd)
+Decimal('1.000000000000000000000000000') feet (ft)
+Decimal('12.00000000000000000000000000') inch (inch)
+Decimal('0.0003048000000000000334060800000') kilometers (km)
+Decimal('30.48000000000000334060800000') centimeters (cm)
+Decimal('304.8000000000000334060800000') millimeters (mm)
+Decimal('304800000.0000000334060800000') nanometer (nm)
+>>> d.inch = 1.0
+>>> print d
+0.0254 meters (m)
+1.57828e-05 miles (mi)
+0.0277778 yard (yd)
+0.0833333 feet (ft)
+1 inch (inch)
+2.54e-05 kilometers (km)
+2.54 centimeters (cm)
+25.4 millimeters (mm)
+2.54e+07 nanometer (nm)
+>>> d
+Decimal('0.02540000000000000278384000000') meters (m)
+Decimal('0.00001578282828282828282828282828') miles (mi)
+Decimal('0.02777777777777777777777777779') yard (yd)
+Decimal('0.08333333333333333333333333333') feet (ft)
+Decimal('1.000000000000000000000000000') inch (inch)
+Decimal('0.00002540000000000000278384000000') kilometers (km)
+Decimal('2.540000000000000278384000000') centimeters (cm)
+Decimal('25.40000000000000278384000000') millimeters (mm)
+Decimal('25400000.00000000278384000000') nanometer (nm)
+>>> d.km = 1.0
+>>> print d
+1000 meters (m)
+0.621371 miles (mi)
+1093.61 yard (yd)
+3280.84 feet (ft)
+39370.1 inch (inch)
+1 kilometers (km)
+100000 centimeters (cm)
+1e+06 millimeters (mm)
+1e+12 nanometer (nm)
+>>> d
+Decimal('1E+3') meters (m)
+Decimal('0.6213711922373339015151515152') miles (mi)
+Decimal('1093.613298337707666666666667') yard (yd)
+Decimal('3280.8398950131230000') feet (ft)
+Decimal('39370.07874015747600000') inch (inch)
+Decimal('1.0') kilometers (km)
+Decimal('1.0E+5') centimeters (cm)
+Decimal('1.0E+6') millimeters (mm)
+Decimal('1.0E+12') nanometer (nm)
+>>> d.cm = 1.0
+>>> print d
+0.01 meters (m)
+6.21371e-06 miles (mi)
+0.0109361 yard (yd)
+0.0328084 feet (ft)
+0.393701 inch (inch)
+1e-05 kilometers (km)
+1 centimeters (cm)
+10 millimeters (mm)
+1e+07 nanometer (nm)
+>>> d
+Decimal('0.01') meters (m)
+Decimal('0.000006213711922373339015151515152') miles (mi)
+Decimal('0.01093613298337707666666666667') yard (yd)
+Decimal('0.032808398950131230000') feet (ft)
+Decimal('0.3937007874015747600000') inch (inch)
+Decimal('0.000010') kilometers (km)
+Decimal('1.0') centimeters (cm)
+Decimal('10') millimeters (mm)
+Decimal('1.0E+7') nanometer (nm)
+>>> d.mm = 1.0
+>>> print d
+0.001 meters (m)
+6.21371e-07 miles (mi)
+0.00109361 yard (yd)
+0.00328084 feet (ft)
+0.0393701 inch (inch)
+1e-06 kilometers (km)
+0.1 centimeters (cm)
+1 millimeters (mm)
+1e+06 nanometer (nm)
+>>> d
+Decimal('0.001') meters (m)
+Decimal('6.213711922373339015151515152E-7') miles (mi)
+Decimal('0.001093613298337707666666666667') yard (yd)
+Decimal('0.0032808398950131230000') feet (ft)
+Decimal('0.03937007874015747600000') inch (inch)
+Decimal('0.0000010') kilometers (km)
+Decimal('0.10') centimeters (cm)
+Decimal('1.0') millimeters (mm)
+Decimal('1.0E+6') nanometer (nm)
+>>> d.nm = 1.0
+>>> print d
+1e-09 meters (m)
+6.21371e-13 miles (mi)
+1.09361e-09 yard (yd)
+3.28084e-09 feet (ft)
+3.93701e-08 inch (inch)
+1e-12 kilometers (km)
+1e-07 centimeters (cm)
+1e-06 millimeters (mm)
+1 nanometer (nm)
+>>> d
+Decimal('1E-9') meters (m)
+Decimal('6.213711922373339015151515152E-13') miles (mi)
+Decimal('1.093613298337707666666666667E-9') yard (yd)
+Decimal('3.2808398950131230000E-9') feet (ft)
+Decimal('3.937007874015747600000E-8') inch (inch)
+Decimal('1.0E-12') kilometers (km)
+Decimal('1.0E-7') centimeters (cm)
+Decimal('0.0000010') millimeters (mm)
+Decimal('1.0') nanometer (nm)
+
+
+Area conversion class
+>>> from conversion import Area
+>>> a = Area(0.0)
+>>> a.m2 = 1.0
+>>> print a
+1 sq_meters (m2)
+3.86102e-07 sq_miles (mi2)
+1.19599 sq_yard (yd2)
+10.7639 sq_feet (ft2)
+1550 sq_inch (inch2)
+1e-06 sq_kilometers (km2)
+10000 sq_centimeters (cm2)
+1e+06 sq_millimeters (mm2)
+>>> a
+Decimal('1') sq_meters (m2)
+Decimal('3.861021585424457626292879869E-7') sq_miles (mi2)
+Decimal('1.195990046301079994320482469') sq_yard (yd2)
+Decimal('10.76391041670971994888434221') sq_feet (ft2)
+Decimal('1550.003100006199672639345279') sq_inch (inch2)
+Decimal('0.00000100') sq_kilometers (km2)
+Decimal('1.00E+4') sq_centimeters (cm2)
+Decimal('1.00E+6') sq_millimeters (mm2)
+>>> a.mi2 = 1.0
+>>> print a
+2.58999e+06 sq_meters (m2)
+1 sq_miles (mi2)
+3.0976e+06 sq_yard (yd2)
+2.78784e+07 sq_feet (ft2)
+4.01449e+09 sq_inch (inch2)
+2.58999 sq_kilometers (km2)
+2.58999e+10 sq_centimeters (cm2)
+2.58999e+12 sq_millimeters (mm2)
+>>> a
+Decimal('2589988.110336000567725393785') sq_meters (m2)
+Decimal('0.9999999999999999999999999998') sq_miles (mi2)
+Decimal('3097600.000000000000000000001') sq_yard (yd2)
+Decimal('27878399.99999999999999999998') sq_feet (ft2)
+Decimal('4014489600.000000000000000000') sq_inch (inch2)
+Decimal('2.589988110336000567725393785') sq_kilometers (km2)
+Decimal('25899881103.36000567725393785') sq_centimeters (cm2)
+Decimal('2589988110336.000567725393785') sq_millimeters (mm2)
+>>> a.yd2 = 1.0
+>>> print a
+0.836127 sq_meters (m2)
+3.22831e-07 sq_miles (mi2)
+1 sq_yard (yd2)
+9 sq_feet (ft2)
+1296 sq_inch (inch2)
+8.36127e-07 sq_kilometers (km2)
+8361.27 sq_centimeters (cm2)
+836127 sq_millimeters (mm2)
+>>> a
+Decimal('0.8361273600000001832791173114') sq_meters (m2)
+Decimal('3.228305785123966942148760329E-7') sq_miles (mi2)
+Decimal('1.000000000000000000000000000') sq_yard (yd2)
+Decimal('8.999999999999999999999999991') sq_feet (ft2)
+Decimal('1295.999999999999999999999999') sq_inch (inch2)
+Decimal('8.361273600000001832791173114E-7') sq_kilometers (km2)
+Decimal('8361.273600000001832791173114') sq_centimeters (cm2)
+Decimal('836127.3600000001832791173114') sq_millimeters (mm2)
+>>> a.ft2 = 1.0
+>>> print a
+0.092903 sq_meters (m2)
+3.58701e-08 sq_miles (mi2)
+0.111111 sq_yard (yd2)
+1 sq_feet (ft2)
+144 sq_inch (inch2)
+9.2903e-08 sq_kilometers (km2)
+929.03 sq_centimeters (cm2)
+92903 sq_millimeters (mm2)
+>>> a
+Decimal('0.09290304000000002036434636803') sq_meters (m2)
+Decimal('3.587006427915518824609733702E-8') sq_miles (mi2)
+Decimal('0.1111111111111111111111111112') sq_yard (yd2)
+Decimal('1.000000000000000000000000000') sq_feet (ft2)
+Decimal('144.0000000000000000000000001') sq_inch (inch2)
+Decimal('9.290304000000002036434636803E-8') sq_kilometers (km2)
+Decimal('929.0304000000002036434636803') sq_centimeters (cm2)
+Decimal('92903.04000000002036434636803') sq_millimeters (mm2)
+>>> a.inch2 = 1.0
+>>> print a
+0.00064516 sq_meters (m2)
+2.49098e-10 sq_miles (mi2)
+0.000771605 sq_yard (yd2)
+0.00694444 sq_feet (ft2)
+1 sq_inch (inch2)
+6.4516e-10 sq_kilometers (km2)
+6.4516 sq_centimeters (cm2)
+645.16 sq_millimeters (mm2)
+>>> a
+Decimal('0.0006451600000000001414190719999') sq_meters (m2)
+Decimal('2.490976686052443628201203959E-10') sq_miles (mi2)
+Decimal('0.0007716049382716049382716049387') sq_yard (yd2)
+Decimal('0.006944444444444444444444444441') sq_feet (ft2)
+Decimal('1.000000000000000000000000000') sq_inch (inch2)
+Decimal('6.451600000000001414190719999E-10') sq_kilometers (km2)
+Decimal('6.451600000000001414190719999') sq_centimeters (cm2)
+Decimal('645.1600000000001414190719999') sq_millimeters (mm2)
+>>> a.km2 = 1.0
+>>> print a
+1e+06 sq_meters (m2)
+0.386102 sq_miles (mi2)
+1.19599e+06 sq_yard (yd2)
+1.07639e+07 sq_feet (ft2)
+1.55e+09 sq_inch (inch2)
+1 sq_kilometers (km2)
+1e+10 sq_centimeters (cm2)
+1e+12 sq_millimeters (mm2)
+>>> a
+Decimal('1E+6') sq_meters (m2)
+Decimal('0.3861021585424457626292879869') sq_miles (mi2)
+Decimal('1195990.046301079994320482469') sq_yard (yd2)
+Decimal('10763910.41670971994888434221') sq_feet (ft2)
+Decimal('1550003100.006199672639345279') sq_inch (inch2)
+Decimal('1.00') sq_kilometers (km2)
+Decimal('1.00E+10') sq_centimeters (cm2)
+Decimal('1.00E+12') sq_millimeters (mm2)
+>>> a.cm2 = 1.0
+>>> print a
+0.0001 sq_meters (m2)
+3.86102e-11 sq_miles (mi2)
+0.000119599 sq_yard (yd2)
+0.00107639 sq_feet (ft2)
+0.155 sq_inch (inch2)
+1e-10 sq_kilometers (km2)
+1 sq_centimeters (cm2)
+100 sq_millimeters (mm2)
+>>> a
+Decimal('0.0001') sq_meters (m2)
+Decimal('3.861021585424457626292879869E-11') sq_miles (mi2)
+Decimal('0.0001195990046301079994320482469') sq_yard (yd2)
+Decimal('0.001076391041670971994888434221') sq_feet (ft2)
+Decimal('0.1550003100006199672639345279') sq_inch (inch2)
+Decimal('1.00E-10') sq_kilometers (km2)
+Decimal('1.00') sq_centimeters (cm2)
+Decimal('100') sq_millimeters (mm2)
+>>> a.mm2 = 1.0
+>>> print a
+1e-06 sq_meters (m2)
+3.86102e-13 sq_miles (mi2)
+1.19599e-06 sq_yard (yd2)
+1.07639e-05 sq_feet (ft2)
+0.00155 sq_inch (inch2)
+1e-12 sq_kilometers (km2)
+0.01 sq_centimeters (cm2)
+1 sq_millimeters (mm2)
+>>> a
+Decimal('0.000001') sq_meters (m2)
+Decimal('3.861021585424457626292879869E-13') sq_miles (mi2)
+Decimal('0.000001195990046301079994320482469') sq_yard (yd2)
+Decimal('0.00001076391041670971994888434221') sq_feet (ft2)
+Decimal('0.001550003100006199672639345279') sq_inch (inch2)
+Decimal('1.00E-12') sq_kilometers (km2)
+Decimal('0.0100') sq_centimeters (cm2)
+Decimal('1.00') sq_millimeters (mm2)
+
+
+Volumn conversion class
+>>> from conversion import Volumn
+>>> v = Volumn(0.0)
+>>> v.m3 = 1.0
+>>> print v
+1 cubic_meters (m3)
+2.39913e-10 cubic_miles (mi3)
+1.30795 cubic_yard (yd3)
+35.3147 cubic_feet (ft3)
+61023.7 cubic_inch (inch3)
+1e-09 cubic_kilometers (km3)
+1e+06 cubic_centimeters (cm3)
+1e+09 cubic_millimeters (mm3)
+>>> v
+Decimal('1') cubic_meters (m3)
+Decimal('2.399127585789276377906099695E-10') cubic_miles (mi3)
+Decimal('1.307950619314391801443540458') cubic_yard (yd3)
+Decimal('35.31466672148857863897559232') cubic_feet (ft3)
+Decimal('61023.74409473226388814982356') cubic_inch (inch3)
+Decimal('1.000E-9') cubic_kilometers (km3)
+Decimal('1.000E+6') cubic_centimeters (cm3)
+Decimal('1.000E+9') cubic_millimeters (mm3)
+>>> v.mi3 = 1.0
+>>> print v
+4.16818e+09 cubic_meters (m3)
+1 cubic_miles (mi3)
+5.45178e+09 cubic_yard (yd3)
+1.47198e+11 cubic_feet (ft3)
+2.54358e+14 cubic_inch (inch3)
+4.16818 cubic_kilometers (km3)
+4.16818e+15 cubic_centimeters (cm3)
+4.16818e+18 cubic_millimeters (mm3)
+>>> v
+Decimal('4168181825.440580954498184203') cubic_meters (m3)
+Decimal('0.9999999999999999999999999999') cubic_miles (mi3)
+Decimal('5451776000.000000000000000003') cubic_yard (yd3)
+Decimal('147197951999.9999999999999999') cubic_feet (ft3)
+Decimal('254358061056000.0000000000000') cubic_inch (inch3)
+Decimal('4.168181825440580954498184203') cubic_kilometers (km3)
+Decimal('4168181825440580.954498184203') cubic_centimeters (cm3)
+Decimal('4168181825440580954.498184203') cubic_millimeters (mm3)
+>>> v.yd3 = 1.0
+>>> print v
+0.764555 cubic_meters (m3)
+1.83426e-10 cubic_miles (mi3)
+1 cubic_yard (yd3)
+27 cubic_feet (ft3)
+46656 cubic_inch (inch3)
+7.64555e-10 cubic_kilometers (km3)
+764555 cubic_centimeters (cm3)
+7.64555e+08 cubic_millimeters (mm3)
+>>> v
+Decimal('0.7645548579840002513856373043') cubic_meters (m3)
+Decimal('1.834264650638617580766341096E-10') cubic_miles (mi3)
+Decimal('1.000000000000000000000000000') cubic_yard (yd3)
+Decimal('26.99999999999999999999999996') cubic_feet (ft3)
+Decimal('46655.99999999999999999999996') cubic_inch (inch3)
+Decimal('7.645548579840002513856373043E-10') cubic_kilometers (km3)
+Decimal('764554.8579840002513856373043') cubic_centimeters (cm3)
+Decimal('764554857.9840002513856373043') cubic_millimeters (mm3)
+>>> v.ft3 = 1.0
+>>> print v
+0.0283168 cubic_meters (m3)
+6.79357e-12 cubic_miles (mi3)
+0.037037 cubic_yard (yd3)
+1 cubic_feet (ft3)
+1728 cubic_inch (inch3)
+2.83168e-11 cubic_kilometers (km3)
+28316.8 cubic_centimeters (cm3)
+2.83168e+07 cubic_millimeters (mm3)
+>>> v
+Decimal('0.02831684659200000931057915946') cubic_meters (m3)
+Decimal('6.793572780143028076912374438E-12') cubic_miles (mi3)
+Decimal('0.03703703703703703703703703709') cubic_yard (yd3)
+Decimal('1.000000000000000000000000000') cubic_feet (ft3)
+Decimal('1728.000000000000000000000001') cubic_inch (inch3)
+Decimal('2.831684659200000931057915946E-11') cubic_kilometers (km3)
+Decimal('28316.84659200000931057915946') cubic_centimeters (cm3)
+Decimal('28316846.59200000931057915946') cubic_millimeters (mm3)
+>>> v.inch3 = 1.0
+>>> print v
+1.63871e-05 cubic_meters (m3)
+3.93147e-15 cubic_miles (mi3)
+2.14335e-05 cubic_yard (yd3)
+0.000578704 cubic_feet (ft3)
+1 cubic_inch (inch3)
+1.63871e-14 cubic_kilometers (km3)
+16.3871 cubic_centimeters (cm3)
+16387.1 cubic_millimeters (mm3)
+>>> v
+Decimal('0.00001638706400000000538806664320') cubic_meters (m3)
+Decimal('3.931465729249437544509475946E-15') cubic_miles (mi3)
+Decimal('0.00002143347050754458161865569275') cubic_yard (yd3)
+Decimal('0.0005787037037037037037037037036') cubic_feet (ft3)
+Decimal('1.000000000000000000000000000') cubic_inch (inch3)
+Decimal('1.638706400000000538806664320E-14') cubic_kilometers (km3)
+Decimal('16.38706400000000538806664320') cubic_centimeters (cm3)
+Decimal('16387.06400000000538806664320') cubic_millimeters (mm3)
+>>> v.km3 = 1.0
+>>> print v
+1e+09 cubic_meters (m3)
+0.239913 cubic_miles (mi3)
+1.30795e+09 cubic_yard (yd3)
+3.53147e+10 cubic_feet (ft3)
+6.10237e+13 cubic_inch (inch3)
+1 cubic_kilometers (km3)
+1e+15 cubic_centimeters (cm3)
+1e+18 cubic_millimeters (mm3)
+>>> v
+Decimal('1E+9') cubic_meters (m3)
+Decimal('0.2399127585789276377906099695') cubic_miles (mi3)
+Decimal('1307950619.314391801443540458') cubic_yard (yd3)
+Decimal('35314666721.48857863897559232') cubic_feet (ft3)
+Decimal('61023744094732.26388814982356') cubic_inch (inch3)
+Decimal('1.000') cubic_kilometers (km3)
+Decimal('1.000E+15') cubic_centimeters (cm3)
+Decimal('1.000E+18') cubic_millimeters (mm3)
+>>> v.cm3 = 1.0
+>>> print v
+1e-06 cubic_meters (m3)
+2.39913e-16 cubic_miles (mi3)
+1.30795e-06 cubic_yard (yd3)
+3.53147e-05 cubic_feet (ft3)
+0.0610237 cubic_inch (inch3)
+1e-15 cubic_kilometers (km3)
+1 cubic_centimeters (cm3)
+1000 cubic_millimeters (mm3)
+>>> v
+Decimal('0.000001') cubic_meters (m3)
+Decimal('2.399127585789276377906099695E-16') cubic_miles (mi3)
+Decimal('0.000001307950619314391801443540458') cubic_yard (yd3)
+Decimal('0.00003531466672148857863897559232') cubic_feet (ft3)
+Decimal('0.06102374409473226388814982356') cubic_inch (inch3)
+Decimal('1.000E-15') cubic_kilometers (km3)
+Decimal('1.000') cubic_centimeters (cm3)
+Decimal('1000') cubic_millimeters (mm3)
+>>> v.mm3 = 1.0
+>>> print v
+1e-09 cubic_meters (m3)
+2.39913e-19 cubic_miles (mi3)
+1.30795e-09 cubic_yard (yd3)
+3.53147e-08 cubic_feet (ft3)
+6.10237e-05 cubic_inch (inch3)
+1e-18 cubic_kilometers (km3)
+0.001 cubic_centimeters (cm3)
+1 cubic_millimeters (mm3)
+>>> v
+Decimal('1E-9') cubic_meters (m3)
+Decimal('2.399127585789276377906099695E-19') cubic_miles (mi3)
+Decimal('1.307950619314391801443540458E-9') cubic_yard (yd3)
+Decimal('3.531466672148857863897559232E-8') cubic_feet (ft3)
+Decimal('0.00006102374409473226388814982356') cubic_inch (inch3)
+Decimal('1.000E-18') cubic_kilometers (km3)
+Decimal('0.001000') cubic_centimeters (cm3)
+Decimal('1.000') cubic_millimeters (mm3)
+
+
+Time conversion class
+>>> from conversion import Time
+>>> t = Time(0.0)
+>>> t.sec = 1.0
+>>> print t
+1 sec (sec)
+0.0166667 min (min)
+0.000277778 hour (hr)
+1.15741e-05 day (day)
+1.65344e-06 week (wk)
+3.16888e-08 year (yr)
+>>> t
+Decimal('1') sec (sec)
+Decimal('0.01666666666666666666666666667') min (min)
+Decimal('0.0002777777777777777777777777778') hour (hr)
+Decimal('0.00001157407407407407407407407407') day (day)
+Decimal('0.000001653439153439153439153439153') week (wk)
+Decimal('3.168876543131932996680764882E-8') year (yr)
+>>> t.min = 1.0
+>>> print t
+60 sec (sec)
+1 min (min)
+0.0166667 hour (hr)
+0.000694444 day (day)
+9.92063e-05 week (wk)
+1.90133e-06 year (yr)
+>>> t
+Decimal('60.0') sec (sec)
+Decimal('1.0') min (min)
+Decimal('0.01666666666666666666666666667') hour (hr)
+Decimal('0.0006944444444444444444444444444') day (day)
+Decimal('0.00009920634920634920634920634921') week (wk)
+Decimal('0.000001901325925879159798008458929') year (yr)
+>>> t.hr = 1.0
+>>> print t
+3600 sec (sec)
+60 min (min)
+1 hour (hr)
+0.0416667 day (day)
+0.00595238 week (wk)
+0.00011408 year (yr)
+>>> t
+Decimal('3600.00') sec (sec)
+Decimal('60.00') min (min)
+Decimal('1.0') hour (hr)
+Decimal('0.04166666666666666666666666667') day (day)
+Decimal('0.005952380952380952380952380952') week (wk)
+Decimal('0.0001140795555527495878805075357') year (yr)
+>>> t.day = 1.0
+>>> print t
+86400 sec (sec)
+1440 min (min)
+24 hour (hr)
+1 day (day)
+0.142857 week (wk)
+0.00273791 year (yr)
+>>> t
+Decimal('86400.000') sec (sec)
+Decimal('1440.000') min (min)
+Decimal('24.00') hour (hr)
+Decimal('1.0') day (day)
+Decimal('0.1428571428571428571428571429') week (wk)
+Decimal('0.002737909333265990109132180858') year (yr)
+>>> t.wk = 1.0
+>>> print t
+604800 sec (sec)
+10080 min (min)
+168 hour (hr)
+7 day (day)
+1 week (wk)
+0.0191654 year (yr)
+>>> t
+Decimal('604800.0000') sec (sec)
+Decimal('10080.0000') min (min)
+Decimal('168.000') hour (hr)
+Decimal('7.00') day (day)
+Decimal('1.0') week (wk)
+Decimal('0.01916536533286193076392526601') year (yr)
+>>> t.yr = 1.0
+>>> print t
+3.15569e+07 sec (sec)
+525949 min (min)
+8765.81 hour (hr)
+365.242 day (day)
+52.1775 week (wk)
+1 year (yr)
+>>> t
+Decimal('31556925.18748800000') sec (sec)
+Decimal('525948.75312480000') min (min)
+Decimal('8765.8125520800') hour (hr)
+Decimal('365.242189670') day (day)
+Decimal('52.17745566714285714285714286') week (wk)
+Decimal('1.0') year (yr)
+
+
+Velocity conversion class
+>>> from conversion import Velocity
+>>> v = Velocity(0.0)
+>>> v.mps = 1.0
+>>> print v
+1 meters_per_sec (mps)
+0.000621371 miles_per_sec (mips)
+2.23694 miles_per_hr (mph)
+3.28084 ft_per_sec (fps)
+39.3701 inch_per_sec (inchps)
+3.6 km_per_hour (kmph)
+0.001 km_per_sec (kmps)
+>>> v
+Decimal('1') meters_per_sec (mps)
+Decimal('0.0006213711922373339015151515152') miles_per_sec (mips)
+Decimal('2.236936292054402045454545455') miles_per_hr (mph)
+Decimal('3.2808398950131230000') ft_per_sec (fps)
+Decimal('39.37007874015747600000') inch_per_sec (inchps)
+Decimal('3.600000') km_per_hour (kmph)
+Decimal('0.0010') km_per_sec (kmps)
+>>> v.mips = 1.0
+>>> print v
+1609.34 meters_per_sec (mps)
+1 miles_per_sec (mips)
+3600 miles_per_hr (mph)
+5280 ft_per_sec (fps)
+63360 inch_per_sec (inchps)
+5793.64 km_per_hour (kmph)
+1.60934 km_per_sec (kmps)
+>>> v
+Decimal('1609.344000000000176384102400') meters_per_sec (mps)
+Decimal('1.000000000000000000000000000') miles_per_sec (mips)
+Decimal('3600.000000000000000000000001') miles_per_hr (mph)
+Decimal('5280.000000000000000000000000') ft_per_sec (fps)
+Decimal('63360.00000000000000000000000') inch_per_sec (inchps)
+Decimal('5793.638400000000634982768640') km_per_hour (kmph)
+Decimal('1.609344000000000176384102400') km_per_sec (kmps)
+>>> v.mph = 1.0
+>>> print v
+0.44704 meters_per_sec (mps)
+0.000277778 miles_per_sec (mips)
+1 miles_per_hr (mph)
+1.46667 ft_per_sec (fps)
+17.6 inch_per_sec (inchps)
+1.60934 km_per_hour (kmph)
+0.00044704 km_per_sec (kmps)
+>>> v
+Decimal('0.4470400000000000489955839999') meters_per_sec (mps)
+Decimal('0.0002777777777777777777777777777') miles_per_sec (mips)
+Decimal('1.000000000000000000000000000') miles_per_hr (mph)
+Decimal('1.466666666666666666666666666') ft_per_sec (fps)
+Decimal('17.60000000000000000000000000') inch_per_sec (inchps)
+Decimal('1.609344000000000176384102400') km_per_hour (kmph)
+Decimal('0.0004470400000000000489955839999') km_per_sec (kmps)
+>>> v.fps = 1.0
+>>> print v
+0.3048 meters_per_sec (mps)
+0.000189394 miles_per_sec (mips)
+0.681818 miles_per_hr (mph)
+1 ft_per_sec (fps)
+12 inch_per_sec (inchps)
+1.09728 km_per_hour (kmph)
+0.0003048 km_per_sec (kmps)
+>>> v
+Decimal('0.3048000000000000334060800000') meters_per_sec (mps)
+Decimal('0.0001893939393939393939393939394') miles_per_sec (mips)
+Decimal('0.6818181818181818181818181820') miles_per_hr (mph)
+Decimal('1.000000000000000000000000000') ft_per_sec (fps)
+Decimal('12.00000000000000000000000000') inch_per_sec (inchps)
+Decimal('1.097280000000000120261888000') km_per_hour (kmph)
+Decimal('0.0003048000000000000334060800000') km_per_sec (kmps)
+>>> v.inchps = 1.0
+>>> print v
+0.0254 meters_per_sec (mps)
+1.57828e-05 miles_per_sec (mips)
+0.0568182 miles_per_hr (mph)
+0.0833333 ft_per_sec (fps)
+1 inch_per_sec (inchps)
+0.09144 km_per_hour (kmph)
+2.54e-05 km_per_sec (kmps)
+>>> v
+Decimal('0.02540000000000000278384000000') meters_per_sec (mps)
+Decimal('0.00001578282828282828282828282828') miles_per_sec (mips)
+Decimal('0.05681818181818181818181818183') miles_per_hr (mph)
+Decimal('0.08333333333333333333333333333') ft_per_sec (fps)
+Decimal('1.000000000000000000000000000') inch_per_sec (inchps)
+Decimal('0.09144000000000001002182400000') km_per_hour (kmph)
+Decimal('0.00002540000000000000278384000000') km_per_sec (kmps)
+>>> v.kmph = 1.0
+>>> print v
+0.277778 meters_per_sec (mps)
+0.000172603 miles_per_sec (mips)
+0.621371 miles_per_hr (mph)
+0.911344 ft_per_sec (fps)
+10.9361 inch_per_sec (inchps)
+1 km_per_hour (kmph)
+0.000277778 km_per_sec (kmps)
+>>> v
+Decimal('0.2777777777777777777777777778') meters_per_sec (mps)
+Decimal('0.0001726031089548149726430976431') miles_per_sec (mips)
+Decimal('0.6213711922373339015151515153') miles_per_hr (mph)
+Decimal('0.9113444152814230555555555556') ft_per_sec (fps)
+Decimal('10.93613298337707666666666667') inch_per_sec (inchps)
+Decimal('1.000000000000000000000000000') km_per_hour (kmph)
+Decimal('0.0002777777777777777777777777778') km_per_sec (kmps)
+>>> v.kmps = 1.0
+>>> print v
+1000 meters_per_sec (mps)
+0.621371 miles_per_sec (mips)
+2236.94 miles_per_hr (mph)
+3280.84 ft_per_sec (fps)
+39370.1 inch_per_sec (inchps)
+3600 km_per_hour (kmph)
+1 km_per_sec (kmps)
+>>> v
+Decimal('1E+3') meters_per_sec (mps)
+Decimal('0.6213711922373339015151515152') miles_per_sec (mips)
+Decimal('2236.936292054402045454545455') miles_per_hr (mph)
+Decimal('3280.8398950131230000') ft_per_sec (fps)
+Decimal('39370.07874015747600000') inch_per_sec (inchps)
+Decimal('3600.000') km_per_hour (kmph)
+Decimal('1.0') km_per_sec (kmps)
+
+
+Acceleration conversion class
+>>> from conversion import Acceleration
+>>> a = Acceleration(0.0)
+>>> a.mps2 = 1.0
+>>> print a
+1 meters_per_sq_sec (mps2)
+0.000621371 miles_per_sq_sec (mips2)
+2.23694 miles_per_hr_per_sec (mphps)
+3.28084 ft_per_sq_sec (fps2)
+39.3701 inch_per_sq_sec (ips2)
+3.6 km_per_hour_per_sec (kmphps)
+0.001 km_per_sq_sec (kmps2)
+>>> a
+Decimal('1') meters_per_sq_sec (mps2)
+Decimal('0.0006213711922373339015151515152') miles_per_sq_sec (mips2)
+Decimal('2.236936292054402045454545455') miles_per_hr_per_sec (mphps)
+Decimal('3.2808398950131230000') ft_per_sq_sec (fps2)
+Decimal('39.37007874015747600000') inch_per_sq_sec (ips2)
+Decimal('3.600000') km_per_hour_per_sec (kmphps)
+Decimal('0.0010') km_per_sq_sec (kmps2)
+>>> a.mips2 = 1.0
+>>> print a
+1609.34 meters_per_sq_sec (mps2)
+1 miles_per_sq_sec (mips2)
+3600 miles_per_hr_per_sec (mphps)
+5280 ft_per_sq_sec (fps2)
+63360 inch_per_sq_sec (ips2)
+5793.64 km_per_hour_per_sec (kmphps)
+1.60934 km_per_sq_sec (kmps2)
+>>> a
+Decimal('1609.344000000000176384102400') meters_per_sq_sec (mps2)
+Decimal('1.000000000000000000000000000') miles_per_sq_sec (mips2)
+Decimal('3600.000000000000000000000001') miles_per_hr_per_sec (mphps)
+Decimal('5280.000000000000000000000000') ft_per_sq_sec (fps2)
+Decimal('63360.00000000000000000000000') inch_per_sq_sec (ips2)
+Decimal('5793.638400000000634982768640') km_per_hour_per_sec (kmphps)
+Decimal('1.609344000000000176384102400') km_per_sq_sec (kmps2)
+>>> a.mphps = 1.0
+>>> print a
+0.44704 meters_per_sq_sec (mps2)
+0.000277778 miles_per_sq_sec (mips2)
+1 miles_per_hr_per_sec (mphps)
+1.46667 ft_per_sq_sec (fps2)
+17.6 inch_per_sq_sec (ips2)
+1.60934 km_per_hour_per_sec (kmphps)
+0.00044704 km_per_sq_sec (kmps2)
+>>> a
+Decimal('0.4470400000000000489955839999') meters_per_sq_sec (mps2)
+Decimal('0.0002777777777777777777777777777') miles_per_sq_sec (mips2)
+Decimal('1.000000000000000000000000000') miles_per_hr_per_sec (mphps)
+Decimal('1.466666666666666666666666666') ft_per_sq_sec (fps2)
+Decimal('17.60000000000000000000000000') inch_per_sq_sec (ips2)
+Decimal('1.609344000000000176384102400') km_per_hour_per_sec (kmphps)
+Decimal('0.0004470400000000000489955839999') km_per_sq_sec (kmps2)
+>>> a.fps2 = 1.0
+>>> print a
+0.3048 meters_per_sq_sec (mps2)
+0.000189394 miles_per_sq_sec (mips2)
+0.681818 miles_per_hr_per_sec (mphps)
+1 ft_per_sq_sec (fps2)
+12 inch_per_sq_sec (ips2)
+1.09728 km_per_hour_per_sec (kmphps)
+0.0003048 km_per_sq_sec (kmps2)
+>>> a
+Decimal('0.3048000000000000334060800000') meters_per_sq_sec (mps2)
+Decimal('0.0001893939393939393939393939394') miles_per_sq_sec (mips2)
+Decimal('0.6818181818181818181818181820') miles_per_hr_per_sec (mphps)
+Decimal('1.000000000000000000000000000') ft_per_sq_sec (fps2)
+Decimal('12.00000000000000000000000000') inch_per_sq_sec (ips2)
+Decimal('1.097280000000000120261888000') km_per_hour_per_sec (kmphps)
+Decimal('0.0003048000000000000334060800000') km_per_sq_sec (kmps2)
+>>> a.ips2 = 1.0
+>>> print a
+0.0254 meters_per_sq_sec (mps2)
+1.57828e-05 miles_per_sq_sec (mips2)
+0.0568182 miles_per_hr_per_sec (mphps)
+0.0833333 ft_per_sq_sec (fps2)
+1 inch_per_sq_sec (ips2)
+0.09144 km_per_hour_per_sec (kmphps)
+2.54e-05 km_per_sq_sec (kmps2)
+>>> a
+Decimal('0.02540000000000000278384000000') meters_per_sq_sec (mps2)
+Decimal('0.00001578282828282828282828282828') miles_per_sq_sec (mips2)
+Decimal('0.05681818181818181818181818183') miles_per_hr_per_sec (mphps)
+Decimal('0.08333333333333333333333333333') ft_per_sq_sec (fps2)
+Decimal('1.000000000000000000000000000') inch_per_sq_sec (ips2)
+Decimal('0.09144000000000001002182400000') km_per_hour_per_sec (kmphps)
+Decimal('0.00002540000000000000278384000000') km_per_sq_sec (kmps2)
+>>> a.kmphps = 1.0
+>>> print a
+0.277778 meters_per_sq_sec (mps2)
+0.000172603 miles_per_sq_sec (mips2)
+0.621371 miles_per_hr_per_sec (mphps)
+0.911344 ft_per_sq_sec (fps2)
+10.9361 inch_per_sq_sec (ips2)
+1 km_per_hour_per_sec (kmphps)
+0.000277778 km_per_sq_sec (kmps2)
+>>> a
+Decimal('0.2777777777777777777777777778') meters_per_sq_sec (mps2)
+Decimal('0.0001726031089548149726430976431') miles_per_sq_sec (mips2)
+Decimal('0.6213711922373339015151515153') miles_per_hr_per_sec (mphps)
+Decimal('0.9113444152814230555555555556') ft_per_sq_sec (fps2)
+Decimal('10.93613298337707666666666667') inch_per_sq_sec (ips2)
+Decimal('1.000000000000000000000000000') km_per_hour_per_sec (kmphps)
+Decimal('0.0002777777777777777777777777778') km_per_sq_sec (kmps2)
+>>> a.kmps2 = 1.0
+>>> print a
+1000 meters_per_sq_sec (mps2)
+0.621371 miles_per_sq_sec (mips2)
+2236.94 miles_per_hr_per_sec (mphps)
+3280.84 ft_per_sq_sec (fps2)
+39370.1 inch_per_sq_sec (ips2)
+3600 km_per_hour_per_sec (kmphps)
+1 km_per_sq_sec (kmps2)
+>>> a
+Decimal('1E+3') meters_per_sq_sec (mps2)
+Decimal('0.6213711922373339015151515152') miles_per_sq_sec (mips2)
+Decimal('2236.936292054402045454545455') miles_per_hr_per_sec (mphps)
+Decimal('3280.8398950131230000') ft_per_sq_sec (fps2)
+Decimal('39370.07874015747600000') inch_per_sq_sec (ips2)
+Decimal('3600.000') km_per_hour_per_sec (kmphps)
+Decimal('1.0') km_per_sq_sec (kmps2)
+
+
+Mass conversion class
+>>> from conversion import Mass
+>>> m = Mass(0.0)
+>>> m.kg = 1.0
+>>> print m
+1 kilogram (kg)
+1000 gram (g)
+35.274 ounce (oz)
+2.20462 pounds (lbm)
+>>> m
+Decimal('1') kilogram (kg)
+Decimal('1000.0') gram (g)
+Decimal('35.27396190000000') ounce (oz)
+Decimal('2.204622618750000') pounds (lbm)
+>>> m.g = 1.0
+>>> print m
+0.001 kilogram (kg)
+1 gram (g)
+0.035274 ounce (oz)
+0.00220462 pounds (lbm)
+>>> m
+Decimal('0.001') kilogram (kg)
+Decimal('1.0000') gram (g)
+Decimal('0.03527396190000000') ounce (oz)
+Decimal('0.002204622618750000') pounds (lbm)
+>>> m.oz = 1.0
+>>> print m
+0.0283495 kilogram (kg)
+28.3495 gram (g)
+1 ounce (oz)
+0.0625 pounds (lbm)
+>>> m
+Decimal('0.02834952316484755289141478604') kilogram (kg)
+Decimal('28.34952316484755289141478604') gram (g)
+Decimal('0.9999999999999999999999999999') ounce (oz)
+Decimal('0.06249999999999999999999999999') pounds (lbm)
+>>> m.lbm = 1.0
+>>> print m
+0.453592 kilogram (kg)
+453.592 gram (g)
+16 ounce (oz)
+1 pounds (lbm)
+>>> m
+Decimal('0.4535923706375608462626365767') kilogram (kg)
+Decimal('453.5923706375608462626365767') gram (g)
+Decimal('16.00000000000000000000000000') ounce (oz)
+Decimal('1.000000000000000000000000000') pounds (lbm)
+
+
+Force conversion class
+>>> from conversion import Force
+>>> f = Force(0.0)
+>>> f.N = 1.0
+>>> print f
+1 newton (N)
+0.101972 kilogram-force (kgf)
+100000 dyne (dyn)
+0.224809 pound-force (lbf)
+>>> f
+Decimal('1') newton (N)
+Decimal('0.1019716209999880463318607632') kilogram-force (kgf)
+Decimal('100000.0') dyne (dyn)
+Decimal('0.2248089421271761404228432072') pound-force (lbf)
+>>> f.kgf = 1.0
+>>> print f
+9.80665 newton (N)
+1 kilogram-force (kgf)
+980665 dyne (dyn)
+2.20462 pound-force (lbf)
+>>> f
+Decimal('9.80665002864') newton (N)
+Decimal('1') kilogram-force (kgf)
+Decimal('980665.002864000000') dyne (dyn)
+Decimal('2.20462261875') pound-force (lbf)
+>>> f.dyn = 1.0
+>>> print f
+1e-05 newton (N)
+1.01972e-06 kilogram-force (kgf)
+1 dyne (dyn)
+2.24809e-06 pound-force (lbf)
+>>> f
+Decimal('0.00001') newton (N)
+Decimal('0.000001019716209999880463318607632') kilogram-force (kgf)
+Decimal('1.000000') dyne (dyn)
+Decimal('0.000002248089421271761404228432072') pound-force (lbf)
+>>> f.lbf = 1.0
+>>> print f
+4.44822 newton (N)
+0.453592 kilogram-force (kgf)
+444822 dyne (dyn)
+1 pound-force (lbf)
+>>> f
+Decimal('4.448221634503721568061227622') newton (N)
+Decimal('0.4535923706375608462626365767') kilogram-force (kgf)
+Decimal('444822.1634503721568061227622') dyne (dyn)
+Decimal('1.0000000000000') pound-force (lbf)
+
+
+Weight conversion class
+>>> from conversion import Weight
+>>> w = Weight(0.0)
+>>> w.kg = 1.0
+>>> print w
+1 kilogram (kg)
+1000 gram (g)
+35.274 ounce (oz)
+2.20462 pounds (lbm)
+>>> w
+Decimal('1') kilogram (kg)
+Decimal('1.0E+3') gram (g)
+Decimal('35.27396190000') ounce (oz)
+Decimal('2.20462261875') pounds (lbm)
+>>> w.g = 1.0
+>>> print w
+0.001 kilogram (kg)
+1 gram (g)
+0.035274 ounce (oz)
+0.00220462 pounds (lbm)
+>>> w
+Decimal('0.001') kilogram (kg)
+Decimal('1.0') gram (g)
+Decimal('0.03527396190000') ounce (oz)
+Decimal('0.00220462261875') pounds (lbm)
+>>> w.oz = 1.0
+>>> print w
+0.0283495 kilogram (kg)
+28.3495 gram (g)
+1 ounce (oz)
+0.0625 pounds (lbm)
+>>> w
+Decimal('0.02834952316484755289141478604') kilogram (kg)
+Decimal('28.34952316484755289141478604') gram (g)
+Decimal('0.9999999999999999999999999999') ounce (oz)
+Decimal('0.06249999999999999999999999999') pounds (lbm)
+>>> w.lbm = 1.0
+>>> print w
+0.453592 kilogram (kg)
+453.592 gram (g)
+16 ounce (oz)
+1 pounds (lbm)
+>>> w
+Decimal('0.4535923706375608462626365767') kilogram (kg)
+Decimal('453.5923706375608462626365767') gram (g)
+Decimal('16.00000000000000000000000000') ounce (oz)
+Decimal('1.0000000000000000000000000') pounds (lbm)
+
+
+Pressure conversion class
+>>> from conversion import Pressure
+>>> p = Pressure(0.0)
+>>> p.Pa = 1.0
+>>> print p
+1 pascal (Pa)
+1 newton_per_sq_m (Nm2)
+0.101972 kilogram_per_sq_m (kgfpm2)
+0.000145038 pound_per_sq_inch (psi)
+0.0208854 pound_per_sq_ft (psf)
+>>> p
+Decimal('1') pascal (Pa)
+Decimal('1') newton_per_sq_m (Nm2)
+Decimal('0.1019716209999880463318607632') kilogram_per_sq_m (kgfpm2)
+Decimal('0.0001450377376085820818722720838') pound_per_sq_inch (psi)
+Decimal('0.02088543421563581978960718007') pound_per_sq_ft (psf)
+>>> p.Nm2 = 1.0
+>>> print p
+1 pascal (Pa)
+1 newton_per_sq_m (Nm2)
+0.101972 kilogram_per_sq_m (kgfpm2)
+0.000145038 pound_per_sq_inch (psi)
+0.0208854 pound_per_sq_ft (psf)
+>>> p
+Decimal('1') pascal (Pa)
+Decimal('1') newton_per_sq_m (Nm2)
+Decimal('0.1019716209999880463318607632') kilogram_per_sq_m (kgfpm2)
+Decimal('0.0001450377376085820818722720838') pound_per_sq_inch (psi)
+Decimal('0.02088543421563581978960718007') pound_per_sq_ft (psf)
+>>> p.kgfpm2 = 1.0
+>>> print p
+9.80665 pascal (Pa)
+9.80665 newton_per_sq_m (Nm2)
+1 kilogram_per_sq_m (kgfpm2)
+0.00142233 pound_per_sq_inch (psi)
+0.204816 pound_per_sq_ft (psf)
+>>> p
+Decimal('9.80665002864') pascal (Pa)
+Decimal('9.80665002864') newton_per_sq_m (Nm2)
+Decimal('1.0') kilogram_per_sq_m (kgfpm2)
+Decimal('0.001422334333673082278302507855') pound_per_sq_inch (psi)
+Decimal('0.2048161440489238480755611312') pound_per_sq_ft (psf)
+>>> p.psi = 1.0
+>>> print p
+6894.76 pascal (Pa)
+6894.76 newton_per_sq_m (Nm2)
+703.07 kilogram_per_sq_m (kgfpm2)
+1 pound_per_sq_inch (psi)
+144 pound_per_sq_ft (psf)
+>>> p
+Decimal('6894.757298950232855610701214') pascal (Pa)
+Decimal('6894.757298950232855610701214') newton_per_sq_m (Nm2)
+Decimal('703.0695781754544249734299157') kilogram_per_sq_m (kgfpm2)
+Decimal('1.000000000000000000000000000') pound_per_sq_inch (psi)
+Decimal('144.0000000000000000000000001') pound_per_sq_ft (psf)
+>>> p.psf = 1.0
+>>> print p
+47.8803 pascal (Pa)
+47.8803 newton_per_sq_m (Nm2)
+4.88243 kilogram_per_sq_m (kgfpm2)
+0.00694444 pound_per_sq_inch (psi)
+1 pound_per_sq_ft (psf)
+>>> p
+Decimal('47.88025902048772816396320285') pascal (Pa)
+Decimal('47.88025902048772816396320285') newton_per_sq_m (Nm2)
+Decimal('4.882427626218433506759929968') kilogram_per_sq_m (kgfpm2)
+Decimal('0.006944444444444444444444444442') pound_per_sq_inch (psi)
+Decimal('1') pound_per_sq_ft (psf)
+
+
+Frequency conversion class
+>>> from conversion import Frequency
+>>> f = Frequency(0.0)
+>>> f.Hz = 1.0
+>>> print f
+1 hertz (Hz)
+0.001 KHz (KHz)
+1e-06 MHz (MHz)
+1e-09 GHz (GHz)
+>>> f
+Decimal('1') hertz (Hz)
+Decimal('0.001') KHz (KHz)
+Decimal('0.000001') MHz (MHz)
+Decimal('1E-9') GHz (GHz)
+>>> f.KHz = 1.0
+>>> print f
+1000 hertz (Hz)
+1 KHz (KHz)
+0.001 MHz (MHz)
+1e-06 GHz (GHz)
+>>> f
+Decimal('1.0E+3') hertz (Hz)
+Decimal('1') KHz (KHz)
+Decimal('0.001') MHz (MHz)
+Decimal('0.000001') GHz (GHz)
+>>> f.MHz = 1.0
+>>> print f
+1e+06 hertz (Hz)
+1000 KHz (KHz)
+1 MHz (MHz)
+0.001 GHz (GHz)
+>>> f
+Decimal('1.0E+6') hertz (Hz)
+Decimal('1E+3') KHz (KHz)
+Decimal('1') MHz (MHz)
+Decimal('0.001') GHz (GHz)
+>>> f.GHz = 1.0
+>>> print f
+1e+09 hertz (Hz)
+1e+06 KHz (KHz)
+1000 MHz (MHz)
+1 GHz (GHz)
+>>> f
+Decimal('1.0E+9') hertz (Hz)
+Decimal('1E+6') KHz (KHz)
+Decimal('1E+3') MHz (MHz)
+Decimal('1') GHz (GHz)
+
+
+Power conversion class
+>>> from conversion import Power
+>>> p = Power(0.0)
+>>> p.W = 1.0
+>>> print p
+1 watts (W)
+0.001 kilowatt (KW)
+1e-06 megawatt (MW)
+0.00134102 Horsepower (hp)
+1 joulepersec (jps)
+>>> p
+Decimal('1') watts (W)
+Decimal('0.001') kilowatt (KW)
+Decimal('0.000001') megawatt (MW)
+Decimal('0.001341022088843807659926754017') Horsepower (hp)
+Decimal('1') joulepersec (jps)
+>>> p.KW = 1.0
+>>> print p
+1000 watts (W)
+1 kilowatt (KW)
+0.001 megawatt (MW)
+1.34102 Horsepower (hp)
+1000 joulepersec (jps)
+>>> p
+Decimal('1.0E+3') watts (W)
+Decimal('1.0') kilowatt (KW)
+Decimal('0.0010') megawatt (MW)
+Decimal('1.341022088843807659926754017') Horsepower (hp)
+Decimal('1.0E+3') joulepersec (jps)
+>>> p.MW = 1.0
+>>> print p
+1e+06 watts (W)
+1000 kilowatt (KW)
+1 megawatt (MW)
+1341.02 Horsepower (hp)
+1e+06 joulepersec (jps)
+>>> p
+Decimal('1.0E+6') watts (W)
+Decimal('1.0E+3') kilowatt (KW)
+Decimal('1.0') megawatt (MW)
+Decimal('1341.022088843807659926754017') Horsepower (hp)
+Decimal('1.0E+6') joulepersec (jps)
+>>> p.hp = 1.0
+>>> print p
+745.7 watts (W)
+0.7457 kilowatt (KW)
+0.0007457 megawatt (MW)
+1 Horsepower (hp)
+745.7 joulepersec (jps)
+>>> p
+Decimal('745.699872') watts (W)
+Decimal('0.745699872') kilowatt (KW)
+Decimal('0.000745699872') megawatt (MW)
+Decimal('1.0') Horsepower (hp)
+Decimal('745.699872') joulepersec (jps)
+>>> p.jps = 1.0
+>>> print p
+1 watts (W)
+0.001 kilowatt (KW)
+1e-06 megawatt (MW)
+0.00134102 Horsepower (hp)
+1 joulepersec (jps)
+>>> p
+Decimal('1') watts (W)
+Decimal('0.001') kilowatt (KW)
+Decimal('0.000001') megawatt (MW)
+Decimal('0.001341022088843807659926754017') Horsepower (hp)
+Decimal('1') joulepersec (jps)
+
+
+Temperature conversion class
+>>> from conversion import Temperature
+>>> t = Temperature(0.0)
+>>> t.K = 1.0
+>>> print t
+1 Kelvin (K)
+-457.87 Fahrenheit (F)
+-272.15 Celsius (C)
+>>> t
+Decimal('1') Kelvin (K)
+Decimal('-457.87') Fahrenheit (F)
+Decimal('-272.15') Celsius (C)
+>>> t.F = 1.0
+>>> print t
+255.928 Kelvin (K)
+1 Fahrenheit (F)
+-17.2222 Celsius (C)
+>>> t
+Decimal('255.9277777777777777777777778') Kelvin (K)
+Decimal('1.00000000000000000000000004') Fahrenheit (F)
+Decimal('-17.2222222222222222222222222') Celsius (C)
+>>> t.C = 1.0
+>>> print t
+274.15 Kelvin (K)
+33.8 Fahrenheit (F)
+1 Celsius (C)
+>>> t
+Decimal('274.15') Kelvin (K)
+Decimal('33.80') Fahrenheit (F)
+Decimal('1.00') Celsius (C)
+
+

@@ -1,0 +1,6 @@
+### Common ingnores
+# python byte code file
+*.pyc
+
+# WebDAV file system cache
+.DAV/
